@@ -1,0 +1,173 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ssm</groupId>
+    <artifactId>ssmdemo</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>ssmdemo Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- 版本号变量 -->
+    <properties>
+        <junit.version>3.8.1</junit.version><!--junit 版本号-->
+        <logback.version>1.1.8</logback.version><!--logback 版本号-->
+        <c3p0.version>0.9.5.2</c3p0.version><!-- 数据库连接池c3p0 版本号-->
+        <mysql-connector-java.version>5.1.37</mysql-connector-java.version><!-- java连接mysql -->
+        <mybatis.version>3.3.0</mybatis.version> <!-- mybatis 版本号 -->
+        <mybatis-spring.version>1.2.3</mybatis-spring.version> <!-- mybatis-spring 版本号 -->
+        <taglibs.version>1.1.2</taglibs.version> <!-- taglibs jsp相关 -->
+        <jstl.version>1.2</jstl.version> <!-- jstl jsp相关 -->
+        <servlet.version>3.1.0</servlet.version><!-- servlet jsp相关 -->
+        <jackson.version>2.5.4</jackson.version> <!-- jackson 版本号 -->
+        <spring.version>4.1.7.RELEASE</spring.version> <!-- spring 版本号 -->
+        <jedis.version>2.7.3</jedis.version><!--redis客户端:Jedis 版本号 -->
+        <protostuff.version>1.0.8</protostuff.version> <!-- protostuff 版本号 -->
+        <commons.version>3.2</commons.version><!-- commons-collections 版本号 -->
+    </properties>
+    <dependencies>
+        <!--1.java测试-->
+        <dependency><!--测试-->
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <!--2.java log相关-->
+        <dependency><!--logback-->
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <!--3.java数据库连接相关-->
+        <dependency><!-- 数据库连接池c3p0-->
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>${c3p0.version}</version>
+        </dependency>
+        <dependency><!-- 数据库连接java资源库 -->
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- 4.mybatis框架 -->
+        <dependency><!-- mybatis框架核心jar包 -->
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <dependency><!--spring+mybatis框架集成-->
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis-spring.version}</version>
+        </dependency>
+        <!-- 5.Servlet web 相关的jar包-->
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>${taglibs.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+        </dependency>
+        <!--6.jackson 数据相关-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!-- 7.Spring -->
+        <!-- 1)Spring核心 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- 2)Spring DAO层 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- 3)Spring web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- 4)Spring test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- 8.redis客户端:Jedis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>${protostuff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>${protostuff.version}</version>
+        </dependency>
+        <!-- 9.Map工具类 -->
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>${commons.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>ssmdemo</finalName>
+    </build>
+</project>
