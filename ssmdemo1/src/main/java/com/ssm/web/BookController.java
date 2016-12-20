@@ -1,10 +1,9 @@
 package com.ssm.web;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
 
 
 @Controller
@@ -14,8 +13,8 @@ public class BookController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-    @RequestMapping(value="/userlogin")
-    public String userlogin() {
+    @RequestMapping(value = "/helpme")
+    public String helpme() {
         return "helpme";
     }
 //    @Autowired
