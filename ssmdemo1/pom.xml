@@ -19,11 +19,15 @@
         <taglibs.version>1.1.2</taglibs.version> <!-- taglibs jsp相关 -->
         <jstl.version>1.2</jstl.version> <!-- jstl jsp相关 -->
         <servlet.version>3.1.0</servlet.version><!-- servlet jsp相关 -->
-        <jackson.version>2.5.4</jackson.version> <!-- jackson 版本号 -->
+        <jackson1.version>1.9.13</jackson1.version>
+        <jackson2.version>2.7.4</jackson2.version> <!-- jackson 版本号 -->
         <spring.version>4.1.7.RELEASE</spring.version> <!-- spring 版本号 -->
         <jedis.version>2.7.3</jedis.version><!--redis客户端:Jedis 版本号 -->
         <protostuff.version>1.0.8</protostuff.version> <!-- protostuff 版本号 -->
         <commons.version>3.2</commons.version><!-- commons-collections 版本号 -->
+
+        <commons-codec.version>1.4</commons-codec.version><!-- commons-codec 版本号(图灵机器人相关类库) -->
+        <fastjson.version>1.2.7</fastjson.version><!-- fastjson 版本号(图灵机器人相关类库) -->
     </properties>
     <dependencies>
         <!--1.java测试-->
@@ -83,22 +87,34 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>${servlet.version}</version>
         </dependency>
-        <!--6.jackson 数据相关-->
+        <!--6.jackson2 数据相关-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson2.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson2.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>${jackson.version}</version>
+            <version>${jackson2.version}</version>
         </dependency>
+
+        <!--<dependency>&lt;!&ndash;jackson数据相关 &ndash;&gt;
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>${jackson1.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson1.version}</version>
+        </dependency>-->
+
         <!-- 7.Spring -->
         <!-- 1)Spring核心 -->
         <dependency>
@@ -166,6 +182,21 @@
             <artifactId>commons-collections</artifactId>
             <version>${commons.version}</version>
         </dependency>
+        <!-- 应用图灵机器人加密解密相关 -->
+        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>ssmdemo</finalName>

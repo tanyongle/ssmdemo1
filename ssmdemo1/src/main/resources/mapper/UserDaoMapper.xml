@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.UserDao">
+    <select id="findUserByEmail" resultType="User">
+        select * from tbl_users u where email=#{email};
+    </select>
+
+    <select id="findUserByOnestoneId" resultType="User">
+        select * from tbl_users u where onestoneId=#{onestoneId};
+    </select>
+
+    <select id="findUserByCName" resultType="User">
+        select * from tbl_users u where cName=#{cname};
+    </select>
+
+    <!--
+    <insert id="insertAppointment">
+        &lt;!&ndash; ignore 主键冲突，报错 &ndash;&gt;
+        INSERT ignore INTO appointment (book_id, student_id)
+        VALUES (#{bookId}, #{studentId})
+    </insert>
+    -->
+</mapper>
