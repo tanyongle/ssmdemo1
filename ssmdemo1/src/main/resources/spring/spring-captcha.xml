@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+    <!--图形验证码相关bean配置-->
     <bean id="captchaService" class="com.octo.captcha.service.multitype.GenericManageableCaptchaService">
         <constructor-arg index="0" ref="imageEngine"/>
         <constructor-arg type="int" index="1" value="180"/>

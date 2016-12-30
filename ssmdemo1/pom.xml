@@ -161,6 +161,17 @@
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <!-- 5) Spring mvc websocket-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
         <!-- 8.redis客户端:Jedis -->
         <dependency>
             <groupId>redis.clients</groupId>
@@ -183,14 +194,13 @@
             <artifactId>commons-collections</artifactId>
             <version>${commons.version}</version>
         </dependency>
-        <!-- 应用图灵机器人加密解密相关 -->
+        <!-- 10.应用图灵机器人加密解密相关 -->
         <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -198,7 +208,7 @@
             <version>${fastjson.version}</version>
         </dependency>
 
-        <!-- 图形验证码 依赖包-->
+        <!-- 11. 图形验证码 依赖包-->
         <dependency>
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha-all</artifactId>
@@ -242,7 +252,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
     </dependencies>
     <build>
         <finalName>ssmdemo</finalName>
