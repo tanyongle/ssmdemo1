@@ -23,10 +23,10 @@
         <jackson2.version>2.7.4</jackson2.version> <!-- jackson 版本号 -->
         <!--<spring.version>4.1.7.RELEASE</spring.version> &lt;!&ndash; spring 版本号 &ndash;&gt;-->
         <spring.version>4.2.8.RELEASE</spring.version> <!-- spring 版本号 -->
+        <spring-security.version>4.2.1.RELEASE</spring-security.version> <!-- spring security 版本号 -->
         <jedis.version>2.7.3</jedis.version><!--redis客户端:Jedis 版本号 -->
         <protostuff.version>1.0.8</protostuff.version> <!-- protostuff 版本号 -->
         <commons.version>3.2</commons.version><!-- commons-collections 版本号 -->
-
         <commons-codec.version>1.4</commons-codec.version><!-- commons-codec 版本号(图灵机器人相关类库) -->
         <fastjson.version>1.2.7</fastjson.version><!-- fastjson 版本号(图灵机器人相关类库) -->
     </properties>
@@ -252,6 +252,24 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--12. spring security 依赖包-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>ssmdemo</finalName>
