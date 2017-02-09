@@ -29,6 +29,9 @@
         <commons.version>3.2</commons.version><!-- commons-collections 版本号 -->
         <commons-codec.version>1.4</commons-codec.version><!-- commons-codec 版本号(图灵机器人相关类库) -->
         <fastjson.version>1.2.7</fastjson.version><!-- fastjson 版本号(图灵机器人相关类库) -->
+        <leancloud.verion>0.1.6</leancloud.verion><!--leancloud IM-->
+        <poi-version>3.15</poi-version>
+        <zxing-version>3.3.0</zxing-version>
     </properties>
     <dependencies>
         <!--1.java测试-->
@@ -268,6 +271,42 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-taglibs</artifactId>
             <version>${spring-security.version}</version>
+        </dependency>
+
+        <!--leancloud-->
+        <dependency>
+            <groupId>cn.leancloud</groupId>
+            <artifactId>java-sdk</artifactId>
+            <version>${leancloud.verion}</version>
+        </dependency>
+
+        <!--Excel相关-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>${poi-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>${poi-version}</version>
+        </dependency>
+
+        <!--二维码相关-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>${zxing-version}</version>
         </dependency>
 
     </dependencies>

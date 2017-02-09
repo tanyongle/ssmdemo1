@@ -2,6 +2,8 @@ package com.ssm.web;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.avos.avoscloud.AVOSCloud;
+import com.ssm.boot.AVOSCloudMain;
 import com.ssm.entity.User;
 import com.ssm.service.impl.UserServiceImpl;
 import com.ssm.turing.TuringUtil;
@@ -26,14 +28,14 @@ public class UserController {
 
     @RequestMapping(value = "/helpme")
     public String helpme() {
-        User user = service.findUserByEmail("andy.lu@vgcs.me");
-        System.out.println(user.getcName() + "," + user.getEmail());
+        User user = service.findUserByEmail("terrence.tan@vgcs.me");
+        System.out.println(user.getUsername() + "," + user.getEmail());
         return "/helpme";
     }
 
     //@CrossOrigin
     @ResponseBody
-    @RequestMapping(value = "/getUser")
+    @RequestMapping(value = "/getUserByEmail")
     public User getUser(@RequestParam String email) {
         System.err.println("传的参数是:" + "" + email);
         return service.findUserByEmail(email);
@@ -41,9 +43,9 @@ public class UserController {
 
     @CrossOrigin(origins = "http://localhost:63343")
     @ResponseBody
-    @RequestMapping(value = "/getUserByCName")
+    @RequestMapping(value = "/getUserByName")
     public User getUserByCName(@RequestParam String cname) {
-        return service.findUserByCName(cname);
+        return service.findUserByName(cname);
     }
 
     @CrossOrigin(origins = "http://localhost:63343")
@@ -80,6 +82,7 @@ public class UserController {
 
     /**
      * 获取验证码
+     *
      * @return code:1234
      */
     @ResponseBody
@@ -87,7 +90,7 @@ public class UserController {
     public Map<String, Object> getCode() {
         Map<String, Object> map = new HashedMap();
         map.put("code", 1234);
-
+        //AVOSCloudMain.initCloud();
         return map;
     }
 

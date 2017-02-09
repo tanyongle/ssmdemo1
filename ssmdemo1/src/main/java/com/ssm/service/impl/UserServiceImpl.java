@@ -20,7 +20,9 @@ public class UserServiceImpl implements UserService {
         return userDao.findUserByEmail(s);
     }
 
-    public User findUserByCName(String c) {
-        return userDao.findUserByCName(c);
+    public User findUserByName(String s) {
+        return userDao.findUserByName(s);
     }
+
+
 }

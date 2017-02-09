@@ -13,7 +13,7 @@ import org.apache.ibatis.annotations.Param;
 public interface UserDao {
     User findUserByEmail(@Param("email") String email);
 
-    User findUserByOnestoneId(@Param("onestoneId") String onestoneId);
+    User findUserById(@Param("id") int id);
 
-    User findUserByCName(@Param("cname")String c);
+    User findUserByName(@Param("username")String username);
 }

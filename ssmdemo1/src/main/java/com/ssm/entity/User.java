@@ -1,16 +1,17 @@
 package com.ssm.entity;
 
-/**
- * Created by Administrator on 2016/12/20.
- */
+import java.sql.Timestamp;
+
 public class User {
     private int id;
-    private String eName;
-    private String cName;
-    private String telphone;
+    private String username;
+    private String nickname;
+    private String password;
     private String email;
-    private String onestoneId;
-    private String position;
+    private String mobile;
+    private String last_login_ip;
+    private Timestamp last_login_timestamp;
+    private Timestamp create_timestamp;
 
     public int getId() {
         return id;
@@ -20,28 +21,28 @@ public class User {
         this.id = id;
     }
 
-    public String geteName() {
-        return eName;
+    public String getUsername() {
+        return username;
     }
 
-    public void seteName(String eName) {
-        this.eName = eName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getcName() {
-        return cName;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setcName(String cName) {
-        this.cName = cName;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getTelphone() {
-        return telphone;
+    public String getPassword() {
+        return password;
     }
 
-    public void setTelphone(String telphone) {
-        this.telphone = telphone;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -52,19 +53,35 @@ public class User {
         this.email = email;
     }
 
-    public String getOnestoneId() {
-        return onestoneId;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setOnestoneId(String onestoneId) {
-        this.onestoneId = onestoneId;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
-    public String getPosition() {
-        return position;
+    public String getLast_login_ip() {
+        return last_login_ip;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setLast_login_ip(String last_login_ip) {
+        this.last_login_ip = last_login_ip;
+    }
+
+    public Timestamp getLast_login_timestamp() {
+        return last_login_timestamp;
+    }
+
+    public void setLast_login_timestamp(Timestamp last_login_timestamp) {
+        this.last_login_timestamp = last_login_timestamp;
+    }
+
+    public Timestamp getCreate_timestamp() {
+        return create_timestamp;
+    }
+
+    public void setCreate_timestamp(Timestamp create_timestamp) {
+        this.create_timestamp = create_timestamp;
     }
 }

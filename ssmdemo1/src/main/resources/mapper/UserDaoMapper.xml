@@ -2,15 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ssm.dao.UserDao">
     <select id="findUserByEmail" resultType="User">
-        select * from tbl_users u where email=#{email};
+        select * from tbl_user u where email=#{email};
     </select>
 
-    <select id="findUserByOnestoneId" resultType="User">
-        select * from tbl_users u where onestoneId=#{onestoneId};
+    <select id="findUserById" resultType="User">
+        select * from tbl_user u where id=#{id};
     </select>
 
-    <select id="findUserByCName" resultType="User">
-        select * from tbl_users u where cName=#{cname};
+    <select id="findUserByName" resultType="User">
+        select * from tbl_user u where username=#{username};
     </select>
 
     <!--

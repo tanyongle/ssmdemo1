@@ -17,6 +17,6 @@ public class UserDaoTest extends BaseTest {
     public void findAllUserByEmail() throws Exception {
         User user = userDao.findUserByEmail("andy.lu@vgcs.me");
 
-        System.out.println(user.getcName() + "," + user.geteName());
+        System.out.println(user.getUsername() + "," + user.getUsername());
     }
 }
